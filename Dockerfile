@@ -10,7 +10,9 @@ RUN apk add --no-cache --virtual=build-dependencies \
 		ca-certificates \
 		gmp-dev \
 		libffi-dev \
-		openssl-dev && \
+		vim \
+		openssl-dev \
+		openssh-client && \
 	cd "/tmp" && \
 	wget "http://releases.ansible.com/ansible/ansible-${ANSIBLE_VERSION}.tar.gz" && \
 	tar -xvzf ansible-${ANSIBLE_VERSION}.tar.gz && \
