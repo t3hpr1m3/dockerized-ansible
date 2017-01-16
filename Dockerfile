@@ -20,6 +20,7 @@ RUN apk add --no-cache --virtual=build-dependencies \
 	rm ansible-${ANSIBLE_VERSION}.tar.gz && \
 	cd ansible-${ANSIBLE_VERSION} && \
 	python setup.py install && \
+	pip install dopy && \
 	cd / && \
 	rm -rf /tmp/ansible-${ANSIBLE_VERSION}
 
